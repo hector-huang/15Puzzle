@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameViewController" customModule="_5Puzzle" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="iN0-l3-epB" id="QoY-0S-7da"/>
+                <outlet property="movesRecord" destination="Ma8-vZ-hd8" id="eyW-eZ-ezx"/>
+                <outlet property="numbersCollectionView" destination="xcU-IP-im4" id="0OV-iU-tLJ"/>
+                <outlet property="refreshButton" destination="bxy-NU-Lb7" id="ef8-rH-F6L"/>
+                <outlet property="view" destination="iN0-l3-epB" id="WSA-jl-cV1"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxy-NU-Lb7">
+                    <rect key="frame" x="10" y="597" width="355" height="50"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.68519905821917804" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="BWy-87-Qjh"/>
+                    </constraints>
+                    <state key="normal" image="refresh-button"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ma8-vZ-hd8">
+                    <rect key="frame" x="87" y="40" width="200" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="A5J-Iw-CqG"/>
+                        <constraint firstAttribute="height" constant="40" id="sSD-x4-rA4"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="xcU-IP-im4">
+                    <rect key="frame" x="10" y="142" width="355" height="355"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="xcU-IP-im4" secondAttribute="height" id="e67-MQ-r26"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="18E-if-qDj">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Ma8-vZ-hd8" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="DJw-7O-Az0"/>
+                <constraint firstItem="bxy-NU-Lb7" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="Ll6-3n-A1i"/>
+                <constraint firstItem="Ma8-vZ-hd8" firstAttribute="centerX" secondItem="xcU-IP-im4" secondAttribute="centerX" id="atN-x8-hLC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xcU-IP-im4" secondAttribute="trailing" constant="10" id="cbt-tm-kcE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="bxy-NU-Lb7" secondAttribute="trailing" constant="10" id="kjn-8f-xL1"/>
+                <constraint firstItem="bxy-NU-Lb7" firstAttribute="top" secondItem="xcU-IP-im4" secondAttribute="bottom" constant="100" id="m9o-mV-CGb"/>
+                <constraint firstItem="xcU-IP-im4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="usu-Hp-skm"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="bxy-NU-Lb7" secondAttribute="bottom" constant="20" id="yc2-qx-grQ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-181.5" y="82.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="refresh-button" width="37" height="37"/>
+    </resources>
+</document>
